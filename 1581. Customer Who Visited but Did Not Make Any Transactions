@@ -1,0 +1,1 @@
+select customer_id, count(*) as count_no_trans from Visits where visit_id NOT IN (SELECT visit_id FROM Transactions) GROUP BY customer_id;
